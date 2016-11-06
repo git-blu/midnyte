@@ -1,0 +1,193 @@
+
+(rules PCB midnyte
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1130)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule Inner2.Cu
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule Inner3.Cu
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule In3.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
+    )
+  )
+  (rule
+    (width 127.0)
+    (clear 127.2)
+    (clear 63.5 (type smd_to_turn_gap))
+    (clear 31.8 (type smd_smd))
+  )
+  (padstack "Via[0-3]_401.6:300_um"
+    (shape
+      (circle F.Cu 401.6 0.0 0.0)
+    )
+    (shape
+      (circle Inner2.Cu 401.6 0.0 0.0)
+    )
+    (shape
+      (circle Inner3.Cu 401.6 0.0 0.0)
+    )
+    (shape
+      (circle In3.Cu 401.6 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-3]_492.6:391_um"
+    (shape
+      (circle F.Cu 492.6 0.0 0.0)
+    )
+    (shape
+      (circle Inner2.Cu 492.6 0.0 0.0)
+    )
+    (shape
+      (circle Inner3.Cu 492.6 0.0 0.0)
+    )
+    (shape
+      (circle In3.Cu 492.6 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-3]_401.6:300_um" "Via[0-3]_401.6:300_um" default
+  )
+  (via 
+    "Via[0-3]_492.6:391_um" "Via[0-3]_492.6:391_um" default
+  )
+  (via 
+    "Via[0-3]_401.6:300_um-kicad_default" "Via[0-3]_401.6:300_um" "kicad_default"
+  )
+  (via 
+    "Via[0-3]_492.6:391_um-kicad_default" "Via[0-3]_492.6:391_um" "kicad_default"
+  )
+  (via 
+    "Via[0-3]_401.6:300_um-High Current EXT" "Via[0-3]_401.6:300_um" "High Current EXT"
+  )
+  (via 
+    "Via[0-3]_492.6:391_um-High Current EXT" "Via[0-3]_492.6:391_um" "High Current EXT"
+  )
+  (via 
+    "Via[0-3]_401.6:300_um-Power" "Via[0-3]_401.6:300_um" Power
+  )
+  (via 
+    "Via[0-3]_492.6:391_um-Power" "Via[0-3]_492.6:391_um" Power
+  )
+  (via_rule
+    default "Via[0-3]_401.6:300_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-3]_401.6:300_um-kicad_default"
+  )
+  (via_rule
+    "High Current EXT" "Via[0-3]_492.6:391_um-High Current EXT"
+  )
+  (via_rule
+    Power "Via[0-3]_401.6:300_um-Power"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 127.0)
+    )
+    (circuit 
+      (use_layer F.Cu In3.Cu)
+    )
+  )
+  (class "kicad_default"
+    /+BRIGHTNESS "/-BRIGHTNESS" /D+ "/D-" "/Midnyte Display/BLANK" "/Midnyte Display/COL0" "/Midnyte Display/COL1" "/Midnyte Display/COL2"
+    "/Midnyte Display/FRAMECLK" "/Midnyte Display/Midnyte LED Row 0/BLUE0L" "/Midnyte Display/Midnyte LED Row 0/BLUE0R" "/Midnyte Display/Midnyte LED Row 0/BLUE1L" "/Midnyte Display/Midnyte LED Row 0/BLUE1R" "/Midnyte Display/Midnyte LED Row 0/BLUE2L" "/Midnyte Display/Midnyte LED Row 0/BLUE2R" "/Midnyte Display/Midnyte LED Row 0/BLUE3L"
+    "/Midnyte Display/Midnyte LED Row 0/BLUE3R" "/Midnyte Display/Midnyte LED Row 0/BLUE4L" "/Midnyte Display/Midnyte LED Row 0/BLUE4R" "/Midnyte Display/Midnyte LED Row 0/BLUE5L" "/Midnyte Display/Midnyte LED Row 0/BLUE5R" "/Midnyte Display/Midnyte LED Row 0/BLUE6L" "/Midnyte Display/Midnyte LED Row 0/BLUE6R" "/Midnyte Display/Midnyte LED Row 0/BLUE7L"
+    "/Midnyte Display/Midnyte LED Row 0/BLUE7R" "/Midnyte Display/Midnyte LED Row 0/DCPROG0" "/Midnyte Display/Midnyte LED Row 0/DCPROG1" "/Midnyte Display/Midnyte LED Row 0/DCPROG2" "/Midnyte Display/Midnyte LED Row 0/GREEN0L" "/Midnyte Display/Midnyte LED Row 0/GREEN0R" "/Midnyte Display/Midnyte LED Row 0/GREEN1L" "/Midnyte Display/Midnyte LED Row 0/GREEN1R"
+    "/Midnyte Display/Midnyte LED Row 0/GREEN2L" "/Midnyte Display/Midnyte LED Row 0/GREEN2R" "/Midnyte Display/Midnyte LED Row 0/GREEN3L" "/Midnyte Display/Midnyte LED Row 0/GREEN3R" "/Midnyte Display/Midnyte LED Row 0/GREEN4L" "/Midnyte Display/Midnyte LED Row 0/GREEN4R" "/Midnyte Display/Midnyte LED Row 0/GREEN5L" "/Midnyte Display/Midnyte LED Row 0/GREEN5R"
+    "/Midnyte Display/Midnyte LED Row 0/GREEN6L" "/Midnyte Display/Midnyte LED Row 0/GREEN6R" "/Midnyte Display/Midnyte LED Row 0/GREEN7L" "/Midnyte Display/Midnyte LED Row 0/GREEN7R" "/Midnyte Display/Midnyte LED Row 0/IREF0" "/Midnyte Display/Midnyte LED Row 0/IREF1" "/Midnyte Display/Midnyte LED Row 0/IREF2" "/Midnyte Display/Midnyte LED Row 0/RED0L"
+    "/Midnyte Display/Midnyte LED Row 0/RED0R" "/Midnyte Display/Midnyte LED Row 0/RED1L" "/Midnyte Display/Midnyte LED Row 0/RED1R" "/Midnyte Display/Midnyte LED Row 0/RED2L" "/Midnyte Display/Midnyte LED Row 0/RED2R" "/Midnyte Display/Midnyte LED Row 0/RED3L" "/Midnyte Display/Midnyte LED Row 0/RED3R" "/Midnyte Display/Midnyte LED Row 0/RED4L"
+    "/Midnyte Display/Midnyte LED Row 0/RED4R" "/Midnyte Display/Midnyte LED Row 0/RED5L" "/Midnyte Display/Midnyte LED Row 0/RED5R" "/Midnyte Display/Midnyte LED Row 0/RED6L" "/Midnyte Display/Midnyte LED Row 0/RED6R" "/Midnyte Display/Midnyte LED Row 0/RED7L" "/Midnyte Display/Midnyte LED Row 0/RED7R" "/Midnyte Display/Midnyte LED Row 0/SER1"
+    "/Midnyte Display/Midnyte LED Row 0/VPROG0" "/Midnyte Display/Midnyte LED Row 0/VPROG1" "/Midnyte Display/Midnyte LED Row 0/VPROG2" "/Midnyte Display/Midnyte LED Row 1/BLUE0L" "/Midnyte Display/Midnyte LED Row 1/BLUE0R" "/Midnyte Display/Midnyte LED Row 1/BLUE1L" "/Midnyte Display/Midnyte LED Row 1/BLUE1R" "/Midnyte Display/Midnyte LED Row 1/BLUE2L"
+    "/Midnyte Display/Midnyte LED Row 1/BLUE2R" "/Midnyte Display/Midnyte LED Row 1/BLUE3L" "/Midnyte Display/Midnyte LED Row 1/BLUE3R" "/Midnyte Display/Midnyte LED Row 1/BLUE4L" "/Midnyte Display/Midnyte LED Row 1/BLUE4R" "/Midnyte Display/Midnyte LED Row 1/BLUE5L" "/Midnyte Display/Midnyte LED Row 1/BLUE5R" "/Midnyte Display/Midnyte LED Row 1/BLUE6L"
+    "/Midnyte Display/Midnyte LED Row 1/BLUE6R" "/Midnyte Display/Midnyte LED Row 1/BLUE7L" "/Midnyte Display/Midnyte LED Row 1/BLUE7R" "/Midnyte Display/Midnyte LED Row 1/DCPROG0" "/Midnyte Display/Midnyte LED Row 1/DCPROG1" "/Midnyte Display/Midnyte LED Row 1/DCPROG2" "/Midnyte Display/Midnyte LED Row 1/GREEN0L" "/Midnyte Display/Midnyte LED Row 1/GREEN0R"
+    "/Midnyte Display/Midnyte LED Row 1/GREEN1L" "/Midnyte Display/Midnyte LED Row 1/GREEN1R" "/Midnyte Display/Midnyte LED Row 1/GREEN2L" "/Midnyte Display/Midnyte LED Row 1/GREEN2R" "/Midnyte Display/Midnyte LED Row 1/GREEN3L" "/Midnyte Display/Midnyte LED Row 1/GREEN3R" "/Midnyte Display/Midnyte LED Row 1/GREEN4L" "/Midnyte Display/Midnyte LED Row 1/GREEN4R"
+    "/Midnyte Display/Midnyte LED Row 1/GREEN5L" "/Midnyte Display/Midnyte LED Row 1/GREEN5R" "/Midnyte Display/Midnyte LED Row 1/GREEN6L" "/Midnyte Display/Midnyte LED Row 1/GREEN6R" "/Midnyte Display/Midnyte LED Row 1/GREEN7L" "/Midnyte Display/Midnyte LED Row 1/GREEN7R" "/Midnyte Display/Midnyte LED Row 1/IREF0" "/Midnyte Display/Midnyte LED Row 1/IREF1"
+    "/Midnyte Display/Midnyte LED Row 1/IREF2" "/Midnyte Display/Midnyte LED Row 1/RED0L" "/Midnyte Display/Midnyte LED Row 1/RED0R" "/Midnyte Display/Midnyte LED Row 1/RED1L" "/Midnyte Display/Midnyte LED Row 1/RED1R" "/Midnyte Display/Midnyte LED Row 1/RED2L" "/Midnyte Display/Midnyte LED Row 1/RED2R" "/Midnyte Display/Midnyte LED Row 1/RED3L"
+    "/Midnyte Display/Midnyte LED Row 1/RED3R" "/Midnyte Display/Midnyte LED Row 1/RED4L" "/Midnyte Display/Midnyte LED Row 1/RED4R" "/Midnyte Display/Midnyte LED Row 1/RED5L" "/Midnyte Display/Midnyte LED Row 1/RED5R" "/Midnyte Display/Midnyte LED Row 1/RED6L" "/Midnyte Display/Midnyte LED Row 1/RED6R" "/Midnyte Display/Midnyte LED Row 1/RED7L"
+    "/Midnyte Display/Midnyte LED Row 1/RED7R" "/Midnyte Display/Midnyte LED Row 1/SER1" "/Midnyte Display/Midnyte LED Row 1/VPROG0" "/Midnyte Display/Midnyte LED Row 1/VPROG1" "/Midnyte Display/Midnyte LED Row 1/VPROG2" "/Midnyte Display/Midnyte LED Row 2/BLUE0L" "/Midnyte Display/Midnyte LED Row 2/BLUE0R" "/Midnyte Display/Midnyte LED Row 2/BLUE1L"
+    "/Midnyte Display/Midnyte LED Row 2/BLUE1R" "/Midnyte Display/Midnyte LED Row 2/BLUE2L" "/Midnyte Display/Midnyte LED Row 2/BLUE2R" "/Midnyte Display/Midnyte LED Row 2/BLUE3L" "/Midnyte Display/Midnyte LED Row 2/BLUE3R" "/Midnyte Display/Midnyte LED Row 2/BLUE4L" "/Midnyte Display/Midnyte LED Row 2/BLUE4R" "/Midnyte Display/Midnyte LED Row 2/BLUE5L"
+    "/Midnyte Display/Midnyte LED Row 2/BLUE5R" "/Midnyte Display/Midnyte LED Row 2/BLUE6L" "/Midnyte Display/Midnyte LED Row 2/BLUE6R" "/Midnyte Display/Midnyte LED Row 2/BLUE7L" "/Midnyte Display/Midnyte LED Row 2/BLUE7R" "/Midnyte Display/Midnyte LED Row 2/DCPROG0" "/Midnyte Display/Midnyte LED Row 2/DCPROG1" "/Midnyte Display/Midnyte LED Row 2/DCPROG2"
+    "/Midnyte Display/Midnyte LED Row 2/GREEN0L" "/Midnyte Display/Midnyte LED Row 2/GREEN0R" "/Midnyte Display/Midnyte LED Row 2/GREEN1L" "/Midnyte Display/Midnyte LED Row 2/GREEN1R" "/Midnyte Display/Midnyte LED Row 2/GREEN2L" "/Midnyte Display/Midnyte LED Row 2/GREEN2R" "/Midnyte Display/Midnyte LED Row 2/GREEN3L" "/Midnyte Display/Midnyte LED Row 2/GREEN3R"
+    "/Midnyte Display/Midnyte LED Row 2/GREEN4L" "/Midnyte Display/Midnyte LED Row 2/GREEN4R" "/Midnyte Display/Midnyte LED Row 2/GREEN5L" "/Midnyte Display/Midnyte LED Row 2/GREEN5R" "/Midnyte Display/Midnyte LED Row 2/GREEN6L" "/Midnyte Display/Midnyte LED Row 2/GREEN6R" "/Midnyte Display/Midnyte LED Row 2/GREEN7L" "/Midnyte Display/Midnyte LED Row 2/GREEN7R"
+    "/Midnyte Display/Midnyte LED Row 2/IREF0" "/Midnyte Display/Midnyte LED Row 2/IREF1" "/Midnyte Display/Midnyte LED Row 2/IREF2" "/Midnyte Display/Midnyte LED Row 2/RED0L" "/Midnyte Display/Midnyte LED Row 2/RED0R" "/Midnyte Display/Midnyte LED Row 2/RED1L" "/Midnyte Display/Midnyte LED Row 2/RED1R" "/Midnyte Display/Midnyte LED Row 2/RED2L"
+    "/Midnyte Display/Midnyte LED Row 2/RED2R" "/Midnyte Display/Midnyte LED Row 2/RED3L" "/Midnyte Display/Midnyte LED Row 2/RED3R" "/Midnyte Display/Midnyte LED Row 2/RED4L" "/Midnyte Display/Midnyte LED Row 2/RED4R" "/Midnyte Display/Midnyte LED Row 2/RED5L" "/Midnyte Display/Midnyte LED Row 2/RED5R" "/Midnyte Display/Midnyte LED Row 2/RED6L"
+    "/Midnyte Display/Midnyte LED Row 2/RED6R" "/Midnyte Display/Midnyte LED Row 2/RED7L" "/Midnyte Display/Midnyte LED Row 2/RED7R" "/Midnyte Display/Midnyte LED Row 2/SER1" "/Midnyte Display/Midnyte LED Row 2/VPROG0" "/Midnyte Display/Midnyte LED Row 2/VPROG1" "/Midnyte Display/Midnyte LED Row 2/VPROG2" "/Midnyte Display/ROW0"
+    "/Midnyte Display/ROW0L" "/Midnyte Display/ROW0R" "/Midnyte Display/ROW1" "/Midnyte Display/ROW10L" "/Midnyte Display/ROW10R" "/Midnyte Display/ROW11L" "/Midnyte Display/ROW11R" "/Midnyte Display/ROW12L"
+    "/Midnyte Display/ROW12R" "/Midnyte Display/ROW13L" "/Midnyte Display/ROW13R" "/Midnyte Display/ROW14L" "/Midnyte Display/ROW14R" "/Midnyte Display/ROW15L" "/Midnyte Display/ROW15R" "/Midnyte Display/ROW16L"
+    "/Midnyte Display/ROW16R" "/Midnyte Display/ROW17L" "/Midnyte Display/ROW17R" "/Midnyte Display/ROW18L" "/Midnyte Display/ROW18R" "/Midnyte Display/ROW19L" "/Midnyte Display/ROW19R" "/Midnyte Display/ROW1L"
+    "/Midnyte Display/ROW1R" "/Midnyte Display/ROW2" "/Midnyte Display/ROW20L" "/Midnyte Display/ROW20R" "/Midnyte Display/ROW21L" "/Midnyte Display/ROW21R" "/Midnyte Display/ROW22L" "/Midnyte Display/ROW22R"
+    "/Midnyte Display/ROW23L" "/Midnyte Display/ROW23R" "/Midnyte Display/ROW2L" "/Midnyte Display/ROW2R" "/Midnyte Display/ROW3L" "/Midnyte Display/ROW3R" "/Midnyte Display/ROW4L" "/Midnyte Display/ROW4R"
+    "/Midnyte Display/ROW5L" "/Midnyte Display/ROW5R" "/Midnyte Display/ROW6L" "/Midnyte Display/ROW6R" "/Midnyte Display/ROW7L" "/Midnyte Display/ROW7R" "/Midnyte Display/ROW8L" "/Midnyte Display/ROW8R"
+    "/Midnyte Display/ROW9L" "/Midnyte Display/ROW9R" "/Midnyte Display/SER2" /SCL /SDA /TCK /TDI /TDO
+    /TMS /UCAP /XTAL1 /XTAL2 "Net-(D5-Pad2)" "Net-(Q1-Pad1)" "Net-(Q2-Pad1)" "Net-(RSETI1-Pad1)"
+    "Net-(TH1-Pad1)" /TIRQ "Net-(CCT1-Pad1)" "Net-(D1-Pad2)" "Net-(D5-Pad1)" "Net-(P1-Pad1)" "Net-(P1-Pad2)" "Net-(P1-Pad4)"
+    "Net-(P1-Pad3)" "Net-(Q3-Pad1)" "/Midnyte Power/POWER_STATUS" /MISO "/MEM_HOLD" "Net-(U6-Pad9)" "Net-(CFB1-Pad2)" "Net-(CFB2-Pad2)"
+    "Net-(CPMIC1-Pad1)" "Net-(CPMIC1-Pad2)" "Net-(CPMIC2-Pad1)" "Net-(CRESET1-Pad1)" "Net-(CSS1-Pad1)" "Net-(CVC1-Pad1)" "Net-(CVC1-Pad2)" "Net-(RBRIGHT-1-Pad2)"
+    "Net-(RCHG1-Pad2)" "Net-(RDIM-1-Pad2)" "Net-(REN1-Pad2)" "Net-(RFB3-Pad2)" "Net-(RFLT1-Pad2)" "Net-(RPMIC1-Pad2)" "Net-(RPMIC2-Pad2)" "Net-(RPMIC5-Pad2)"
+    "Net-(RPOK1-Pad2)" "Net-(RPOWER1-Pad1)" "Net-(RRESET-1-Pad1)" "Net-(RRT1-Pad1)" "Net-(RXERR1-Pad2)" "Net-(RXERR2-Pad2)" "Net-(RXERR3-Pad2)" "Net-(RXERR4-Pad2)"
+    "Net-(RXERR5-Pad2)" "Net-(RXERR6-Pad2)" "Net-(RXERR7-Pad2)" "Net-(RXERR8-Pad2)" "Net-(RXERR9-Pad2)" "/Midnyte Display/GSCLK" "/F_PROT" "/MEM_CS"
+    /SCLK /MOSI "/~MEM_CS" "Net-(U10-Pad14)" "Net-(U12-Pad23)" "Net-(U15-Pad23)" "Net-(U18-Pad23)" "/Midnyte Display/ROWCLK"
+    "/Midnyte Display/COLCLK" "Net-(CPOWER1-Pad1)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 127.0)
+    )
+    (circuit 
+      (use_layer F.Cu In3.Cu)
+    )
+  )
+  (class "High Current EXT"
+    "/Midnyte Power/BAT+" "/Midnyte Power/PMIC_IN" "/Midnyte Power/WALL" "Net-(L2-Pad1)" "Net-(L3-Pad1)" "/Midnyte Power/PMIC_OUT" +5V
+    (clearance_class "High Current EXT")
+    (via_rule High Current EXT)
+    (rule
+      (width 391.0)
+    )
+    (circuit 
+      (use_layer F.Cu In3.Cu)
+    )
+  )
+  (class Power
+    GND +3.3V /VBUS
+    (clearance_class Power)
+    (via_rule Power)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu In3.Cu)
+    )
+  )
+)

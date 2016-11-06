@@ -1,0 +1,62 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 74HC595CS
+D 8 bits serial in // out Shift Register 3 State Out
+K HCMOS SR 3State
+F 74xx/74HC595.pdf
+$ENDCMP
+#
+$CMP 74HCT04
+D Hex Inverseur
+K HCTMOS not inv
+$ENDCMP
+#
+$CMP 74LS14
+D Hex inverseur schmitt trigger
+K TTL not inv
+$ENDCMP
+#
+$CMP ATmega32U4-QFN44
+D 8-Bit AVR Microcontroller with 32K Bytes of ISP Flash and USB Controller
+K Microcontroller, ATmega32U4
+$ENDCMP
+#
+$CMP AVR_JTAG
+D Symbole general de connecteur
+K CONN
+$ENDCMP
+#
+$CMP FQP27P06
+D FQP27P06, 60V Vds, 27A Id, 70mOhm Rds, P-Channel QFET MOSFET, TO-220
+K P-Channel QFET MOSFET
+$ENDCMP
+#
+$CMP MOSFET_N
+F transistors/mos/*.*
+$ENDCMP
+#
+$CMP N-CHANNEL_FET
+F transistors/mos/*.*
+$ENDCMP
+#
+$CMP SCHOTTKY
+D Diode (Schottky)
+K DIODE SCHOTTKY
+$ENDCMP
+#
+$CMP TC7S04F
+D Hex Inverseur
+K HCTMOS not inv
+$ENDCMP
+#
+$CMP USB-MINI-B
+D USB Mini B connector
+K USB Mini B, USB
+$ENDCMP
+#
+$CMP USB-MINI-B-OTG
+D USB Mini B connector
+K USB Mini B, USB
+$ENDCMP
+#
+#End Doc Library

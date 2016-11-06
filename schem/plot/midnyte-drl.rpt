@@ -1,0 +1,27 @@
+Drill report for F:\midnyte\schem\midnyte.kicad_pcb
+Created on 11/17/2014 11:17:57 AM
+Drill report for plated through holes :
+T1  0.30mm  0.012"  (509 holes)
+T2  0.39mm  0.015"  (4 holes)
+T3  0.60mm  0.024"  (10 holes)
+T4  1.02mm  0.040"  (211 holes)
+T5  3.00mm  0.118"  (2 holes)
+
+Total plated holes count 736
+
+
+Drill report for buried and blind vias :
+
+Drill report for holes from layer B.Cu to layer B.Adhes :
+
+Total plated holes count 0
+
+
+Drill report for unplated through holes :
+T1  0.90mm  0.035"  (2 holes)
+T2  1.60mm  0.063"  (1 hole)
+T3  1.80mm  0.071"  (1 hole)
+
+Total unplated holes count 4
+
+
