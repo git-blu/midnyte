@@ -5,10 +5,10 @@ class DisplayDriver {
 	public:
 		// Construction
 		DisplayDriver();
-		~DisplayDriver();
 
 		// Public accessors
-		uint16_t Brightness();
+		uint16_t Brightness() const;
+
 		uint8_t  Brightness(const uint16_t brightness);
 		uint8_t  CurrentColor(const ::Pixel* pColor);
 		uint8_t  Frame(const ::Pixel* pFrame);

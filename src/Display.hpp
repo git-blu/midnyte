@@ -7,12 +7,13 @@ class Display {
 		Display();
 
 		// Public methods
-		void Touch(uint8_t x, uint8_t y);
+		void Touch(const uint8_t x, const uint8_t y) const;
 
 	private:
 		// Implementation
 		void MainMenu();
+		// Functions for mapping touch events to UI events go here
 
 		// Private members
-		::DisplayDriver displayDriver;
+		static ::DisplayDriver displayDriver;
 };

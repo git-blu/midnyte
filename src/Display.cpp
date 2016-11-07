@@ -10,7 +10,7 @@ Display::Display() {
 // -----------------------------------------------------------------------------
 // Public methods
 // -----------------------------------------------------------------------------
-void Display::Touch(uint8_t x, uint8_t y) {
+void Display::Touch(uint8_t x, uint8_t y) const {
 }
 
 

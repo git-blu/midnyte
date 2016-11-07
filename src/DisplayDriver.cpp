@@ -254,7 +254,7 @@ DisplayDriver::DisplayDriver() : brightness(0) {
 // -----------------------------------------------------------------------------
 // Public accessors
 // -----------------------------------------------------------------------------
-uint16_t DisplayDriver::Brightness() {
+uint16_t DisplayDriver::Brightness() const {
 	return this->brightness;
 }
 
