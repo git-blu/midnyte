@@ -6,6 +6,9 @@
 Pixel::Pixel() : red(0), green(0), blue(0) {
 }
 
+Pixel::~Pixel() {
+}
+
 Pixel* Pixel::operator=(const Pixel *src) {
 	this->red = src->red;
 	this->green = src->green;
