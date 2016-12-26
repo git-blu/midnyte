@@ -7,7 +7,7 @@ class Display {
 		Display();
 
 		// Public methods
-		void Touch(const uint8_t x, const uint8_t y) const;
+		void Touch(const uint8_t x, const uint8_t y);
 
 	private:
 		// Implementation
