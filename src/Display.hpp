@@ -1,5 +1,6 @@
 #include "mcu.h"
 #include "DisplayDriver.hpp"
+#include "Pixel.hpp"
 
 class Display {
 	public:
@@ -15,5 +16,6 @@ class Display {
 		// Functions for mapping touch events to UI events go here
 
 		// Private members
-		static ::DisplayDriver displayDriver;
+		static DisplayDriver displayDriver;
+		static Pixel pixel;
 };

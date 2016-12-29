@@ -2,25 +2,25 @@
 #include "Pixel.hpp"
 
 class DisplayDriver {
+	static const uint8_t display_width = 16;
+	static const uint8_t display_height = 24;
+
 	public:
 		// Construction
 		DisplayDriver();
 
 		// Public accessors
-		uint16_t Brightness() const;
-
-		uint8_t  Brightness(const uint16_t brightness);
-		uint8_t  CurrentColor(const ::Pixel* pColor);
-		uint8_t  Frame(const ::Pixel* pFrame);
+		uint8_t Brightness() const;
+		void  Brightness(const uint8_t brightness);
 
 		// Public methods
-		uint8_t  Clear();
-		uint8_t  Update(const uint8_t x, const uint8_t y);
-		uint8_t  Update(const ::Pixel *frame);
+		void  Clear();
+		void  Update(const Pixel *pixel);
 
 	private:
 		// Implementation
-		::Pixel* pFrame;
-		::Pixel  currentColor;
-		uint16_t brightness;
+
+		// Private members
+		Pixel frame[display_width][display_height];
+		uint8_t brightness;
 };

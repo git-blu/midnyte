@@ -1,5 +1,9 @@
 #include "Display.hpp"
 
+// Static initialization
+DisplayDriver Display::displayDriver;
+Pixel Display::pixel;
+
 // -----------------------------------------------------------------------------
 // Construction
 // -----------------------------------------------------------------------------
